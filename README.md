@@ -1,5 +1,5 @@
 # telegram_bot
-git clone https://github.com/JackScher/urich_tz.git
+git clone 
 cd urich_tz
 python3 -m venv venv
 source venv/bin/activate
