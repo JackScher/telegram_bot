@@ -26,7 +26,15 @@ async def main(message: str, chat_id: Union[None, int]):
 
 
 if __name__ == '__main__':
-   message = sys.argv[1]
+   if (len(sys.argv)) == 3:
+      message = sys.argv[-2]
+      chat_id = sys.argv[-1]
+   elif (len(sys.argv)) == 2:
+      message = sys.argv[-1]
+      chat_id = None
+   else:
+      print('Wrong atr count')
+      sys.exit()
 
    with client:
-      client.loop.run_until_complete(main(message, None))
+      client.loop.run_until_complete(main(message, chat_id))
